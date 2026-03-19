@@ -14,7 +14,7 @@ import {
   Sparkles,
   BookOpen,
 } from "lucide-react";
-import vastuPractice from "@/assets/vastu-practice.jpeg";
+import vastuPractice from "@/assets/hero-3.jpeg";
 import vedicVastuVideo from "@/assets/vedic-vastu.mp4";
 import aboutHero from "@/assets/about-hero.png";
 
@@ -213,8 +213,8 @@ const Index = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               {[
-                { num: "500+", label: "Consultations" },
-                { num: "15+", label: "Years Experience" },
+                { num: "5800+", label: "Consultations" },
+                { num: "16+", label: "Years Experience" },
                 { num: "100%", label: "Client Satisfaction" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
@@ -287,7 +287,7 @@ const Index = () => {
                 animate={whatIsInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.25 }}
               >
-                <img src={vastuPractice} alt="Traditional Vastu practice and energy alignment" className="w-full h-full max-h-[320px] md:max-h-[380px] object-cover object-center" />
+                <img src={vastuPractice} alt="Traditional Vastu practice and energy alignment" className="w-full h-full object-cover object-center" />
               </motion.div>
             </div>
           </div>

@@ -2,10 +2,10 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import aboutHero from "@/assets/about-hero.png";
-import consultantLobby from "@/assets/consultant-lobby.png";
-import consultantEvent from "@/assets/consultant-event.png";
+import consultantLobby from "@/assets/consult-lobby.jpeg";
+import consultantEvent from "@/assets/consultant-event.jpeg";
 import geoVastuCertificate from "@/assets/geo-vastu-certificate.jpeg";
-import vedicVastuCertificate from "@/assets/vedic-vastu-certificate.png";
+import vedicVastuCertificate from "@/assets/vedic-vastu-temp.jpeg";
 import vedicVastuVideo from "@/assets/vedic-vastu.mp4";
 
 const AboutPage = () => {
@@ -39,8 +39,8 @@ const AboutPage = () => {
               </p>
               <div className="grid grid-cols-3 gap-6 mt-8">
                 {[
-                  { num: "500+", label: "Consultations" },
-                  { num: "15+", label: "Years Experience" },
+                  { num: "5800+", label: "Consultations" },
+                  { num: "16+", label: "Years Experience" },
                   { num: "100%", label: "Client Satisfaction" },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
@@ -75,17 +75,17 @@ const AboutPage = () => {
             <div className="grid md:grid-cols-2 gap-8">
               
               <motion.div className="rounded-xl overflow-hidden shadow-lg border border-gold/20 bg-background" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-                <img src={consultantLobby} alt="Mystic Vigyan consultation environment" className="w-full h-96 object-cover object-top" />
+                <img src={consultantLobby} alt="Mystic Vigyan consultation environment" className="w-full h-96 object-cover" />
                 <div className="p-4 text-center">
-                  <p className="text-primary font-semibold">Our Space</p>
-                  <p className="text-muted-foreground text-sm">A harmonious environment for consultations</p>
+                  <p className="text-primary font-semibold">Anshu Saggi (Vastu Expert)</p>
+                  <p className="text-muted-foreground text-sm">Helping you create balanced spaces that attract prosperity, peace, and positive energy.</p>
                 </div>
               </motion.div>
               <motion.div className="rounded-xl overflow-hidden shadow-lg border border-gold/20 bg-background" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-                <img src={consultantEvent} alt="Mystic Vigyan at professional events" className="w-full h-96 object-cover object-top" />
+                <img src={consultantEvent} alt="Mystic Vigyan at professional events" className="w-full h-96 object-cover" />
                 <div className="p-4 text-center">
-                  <p className="text-primary font-semibold">Events & Workshops</p>
-                  <p className="text-muted-foreground text-sm">Sharing Vastu wisdom at gatherings</p>
+                  <p className="text-primary font-semibold">Munish Saggi (Astrologer & Researcher)</p>
+                  <p className="text-muted-foreground text-sm">Decoding cosmic patterns to provide accurate guidance for life decisions and spiritual growth.</p>
                 </div>
               </motion.div>
             </div>
@@ -99,31 +99,22 @@ const AboutPage = () => {
           <div className="max-w-6xl mx-auto">
             <motion.div className="text-center mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-3">Credentials</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">Certifications & Training</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto mt-4">Our team holds certifications from recognized Vastu and Geo Vastu programs.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">Real Results, Real Spaces</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto mt-4">A glimpse of how we’ve transformed spaces with Vastu.</p>
               <div className="w-20 h-0.5 bg-gold mx-auto mt-4" />
             </motion.div>
             <div className="grid md:grid-cols-3 gap-10">
               <motion.div className="rounded-xl overflow-hidden shadow-xl border-2 border-gold/20 bg-background" initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <img src={geoVastuCertificate} alt="8-Day Geo Vastu Advance & Industrial Training Program - Certificate of Completion" className="w-full object-cover object-top aspect-[3/4]" />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-2">Geo Vastu Advance & Industrial Training</h3>
-                  <p className="text-muted-foreground text-sm">8-Day advanced program in Geo Vastu and industrial applications, with Certificate of Completion.</p>
-                </div>
+               
               </motion.div>
               <motion.div className="rounded-xl overflow-hidden shadow-xl border-2 border-gold/20 bg-background" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                 <video src={vedicVastuVideo} className="w-full aspect-[3/4] object-cover object-top" controls playsInline muted loop />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-2">Vedic Vastu</h3>
-                  <p className="text-muted-foreground text-sm">Explore our Vedic Vastu approach and expertise.</p>
-                </div>
+               
               </motion.div>
               <motion.div className="rounded-xl overflow-hidden shadow-xl border-2 border-gold/20 bg-background" initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                 <img src={vedicVastuCertificate} alt="Vedic Vastu Expert certification from Sahasra MahaVaastu" className="w-full object-cover object-top aspect-[3/4]" />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-2">Vedic Vastu Expert</h3>
-                  <p className="text-muted-foreground text-sm">Recognized expertise in Vedic Vastu under the Sahasra MahaVaastu tradition.</p>
-                </div>
+              
               </motion.div>
             </div>
           </div>
