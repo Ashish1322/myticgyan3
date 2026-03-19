@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import { Factory, Building2, Home, Star, Layout, CheckCircle, ArrowLeft } from "lucide-react";
+import { Factory, Building2, Sparkles, ScrollText, Brain, Moon, Map, Star, Layout, CheckCircle, ArrowLeft } from "lucide-react";
 
 const serviceData: Record<string, {
   icon: any;
@@ -18,108 +18,204 @@ const serviceData: Record<string, {
     tagline: "Align your life path with the celestial movements",
     bannerImage: "https://images.unsplash.com/photo-1506318137071-a8e063b4b47e?auto=format&fit=crop&q=80",
     description: [
-      "Our Astrology services provide deep insights into your life's journey by analyzing the positions of celestial bodies at the time of your birth. We help you understand your strengths, challenges, and the timing of significant life events.",
-      "Through detailed horoscope analysis and Prashna Kundali, we offer guidance on career, relationships, health, and financial stability, helping you make informed decisions aligned with your destiny."
+      "Our Astrology services provide deep insights into your life's journey by analyzing planetary positions at birth.",
+      "We guide you in career, relationships, health, and finances through detailed horoscope and predictive techniques."
     ],
     benefits: [
-      "Clarity on life purpose and career path",
-      "Guidance on relationship compatibility",
-      "Identification of favorable time periods (Mahadashas)",
-      "Effective Vedic remedies for planetary doshas"
+      "Clarity on life purpose and direction",
+      "Relationship and compatibility insights",
+      "Favorable timing (Mahadasha analysis)",
+      "Effective remedies for planetary imbalances"
     ],
     process: [
-      "Birth detail collection and chart generation",
-      "In-depth analysis of planetary positions",
-      "One-on-one consultation for life guidance",
-      "Remedial suggestions and follow-up support"
+      "Birth details collection",
+      "Chart preparation and analysis",
+      "Consultation session",
+      "Remedy and follow-up guidance"
     ],
   },
+
+  "vedic-astrology": {
+    icon: Sparkles,
+    title: "Vedic Astrology",
+    tagline: "Ancient wisdom to decode your destiny and karma",
+    bannerImage: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80",
+    description: [
+      "Vedic Astrology is a time-tested Indian system that reveals deep karmic patterns and life events.",
+      "It provides accurate predictions and remedies based on planetary movements and ancient scriptures."
+    ],
+    benefits: [
+      "Deep karmic insights",
+      "Accurate life predictions",
+      "Spiritual and practical remedies",
+      "Guidance for major life decisions"
+    ],
+    process: [
+      "Kundali creation",
+      "Planetary position analysis",
+      "Dasha and transit study",
+      "Remedial guidance"
+    ],
+  },
+
+  "bhrigu-nandi-nadi": {
+    icon: ScrollText,
+    title: "Bhrigu Nandi Nadi",
+    tagline: "Highly precise predictions using Nadi principles",
+    bannerImage: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80",
+    description: [
+      "Bhrigu Nandi Nadi is an advanced predictive system focusing on planetary combinations rather than houses.",
+      "It provides highly accurate insights into life events and their timing."
+    ],
+    benefits: [
+      "Accurate event predictions",
+      "Deep understanding of life patterns",
+      "Insights into past, present, and future",
+      "Clarity on major decisions"
+    ],
+    process: [
+      "Chart decoding using Nadi principles",
+      "Planetary combination analysis",
+      "Event timing prediction",
+      "Consultation and remedies"
+    ],
+  },
+
+  "kp-astrology": {
+    icon: Brain,
+    title: "K.P Astrology",
+    tagline: "Scientific astrology with precise event prediction",
+    bannerImage: "https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&q=80",
+    description: [
+      "KP Astrology (Krishnamurti Paddhati) is a modern system known for its accuracy.",
+      "It uses sub-lord theory to predict events with high precision."
+    ],
+    benefits: [
+      "Highly accurate predictions",
+      "Clear yes/no answers",
+      "Best for career and marriage queries",
+      "Scientific approach"
+    ],
+    process: [
+      "KP chart creation",
+      "Sub-lord analysis",
+      "Event prediction",
+      "Guidance and remedies"
+    ],
+  },
+
+  "nakshatra-analysis": {
+    icon: Moon,
+    title: "Nakshatra Analysis",
+    tagline: "Understand your personality through your birth star",
+    bannerImage: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80",
+    description: [
+      "Nakshatras represent subtle energies influencing your personality and life path.",
+      "This analysis helps uncover your true nature, strengths, and karmic patterns."
+    ],
+    benefits: [
+      "Deep personality insights",
+      "Life path clarity",
+      "Relationship understanding",
+      "Emotional and spiritual growth"
+    ],
+    process: [
+      "Nakshatra identification",
+      "Behavioral analysis",
+      "Life pattern study",
+      "Guidance session"
+    ],
+  },
+
   "residential-vastu": {
     icon: Layout,
     title: "Residential Vastu",
-    tagline: "Infuse your living space with peace and prosperity",
+    tagline: "Create a harmonious and peaceful living environment",
     bannerImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
     description: [
-      "Residential Vastu focuses on creating a balanced environment within your home. By optimizing the flow of energy (Prana), we ensure that your living space supports the health and happiness of every family member.",
-      "We provide specific layouts for bedrooms, kitchens, and entrances to eliminate negative influences and invite abundance into your household."
+      "Residential Vastu ensures your home promotes health, peace, and prosperity.",
+      "We optimize layouts and directions for maximum positive energy flow."
     ],
     benefits: [
-      "Enhanced family harmony and mental peace",
-      "Better physical health and vitality",
-      "Positive environment for children's growth",
-      "Removal of stagnant energy from the home"
+      "Better family harmony",
+      "Improved health and well-being",
+      "Positive environment",
+      "Removal of negative energy"
     ],
     process: [
-      "Home floor plan evaluation",
-      "Directional energy mapping",
-      "Practical remedy implementation (no demolition)",
-      "Final energy balancing session"
+      "Layout analysis",
+      "Directional mapping",
+      "Remedy suggestions",
+      "Final balancing"
     ],
   },
-  "industrial-vastu": {
-    icon: Factory,
-    title: "Industrial Vastu",
-    tagline: "Maximize efficiency and prosperity in your industrial facilities",
-    bannerImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80",
-    description: [
-      "Industrial Vastu focuses on aligning your factory, warehouse, or manufacturing unit with the cosmic energies that govern productivity. We optimize the placement of heavy machinery, raw materials, and administrative zones.",
-      "Our consultations consider the direction of entrances, water elements, and fire elements (furnaces/boilers) to reduce accidents and increase output."
-    ],
-    benefits: [
-      "Improved workflow and operational efficiency",
-      "Reduced workplace accidents and downtime",
-      "Optimal placement of heavy machinery",
-      "Balanced energy flow for mass production"
-    ],
-    process: [
-      "On-site inspection and measurement",
-      "Analysis of directional alignments",
-      "Detailed report with Vastu corrections",
-      "Implementation guidance"
-    ],
-  },
+
   "commercial-vastu": {
     icon: Building2,
     title: "Commercial Vastu",
-    tagline: "Attract prosperity and success to your business spaces",
+    tagline: "Design spaces that attract growth and success",
     bannerImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
     description: [
-      "Transform offices, retail shops, and showrooms into spaces that attract customers and increase revenue. We analyze the layout from the reception to the cash counter.",
-      "Proper directional alignment impacts employee productivity and customer experience, ensuring your brand identity is reflected in a high-vibration environment."
+      "Commercial Vastu enhances business growth and financial success.",
+      "We optimize layouts to improve customer experience and profitability."
     ],
     benefits: [
-      "Increased customer footfall",
-      "Improved financial flow and cash liquidity",
-      "Enhanced employee teamwork",
-      "Strategic placement of executive cabins"
+      "Increased revenue",
+      "Better customer flow",
+      "Improved team productivity",
+      "Financial stability"
     ],
     process: [
-      "Commercial property evaluation",
-      "Business-specific energy audit",
-      "Customized Vastu recommendations",
-      "Follow-up support"
+      "Site analysis",
+      "Energy audit",
+      "Recommendations",
+      "Implementation support"
     ],
   },
-  "vedic-vastu": {
-    icon: Home,
-    title: "Vedic Vastu",
-    tagline: "Traditional science of living in harmony with nature",
-    bannerImage: "https://images.unsplash.com/photo-1542601906970-14197b4c1510?auto=format&fit=crop&q=80",
+
+  "industrial-vastu": {
+    icon: Factory,
+    title: "Industrial Vastu",
+    tagline: "Boost productivity and reduce operational challenges",
+    bannerImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80",
     description: [
-      "Vedic Vastu is the ancient science of aligning human-made structures with the five elements (Pancha Bhoota). This holistic approach ensures your space is a sanctuary of spiritual and physical well-being.",
-      "We use ancient mathematical calculations to determine the most auspicious dimensions and orientations for any structure."
+      "Industrial Vastu focuses on optimizing production environments.",
+      "We align machinery and workflow for maximum efficiency."
     ],
     benefits: [
-      "Alignment with the five natural elements",
-      "Spiritual growth and positive vibrations",
-      "Energy correction without structural changes",
-      "Long-term stability and success"
+      "Higher productivity",
+      "Reduced downtime",
+      "Safer work environment",
+      "Efficient workflow"
     ],
     process: [
-      "Consultation on Vedic principles",
-      "Assessment of elemental balance",
-      "Personalized report with remedies",
-      "Ongoing spiritual guidance"
+      "Site inspection",
+      "Layout analysis",
+      "Correction plan",
+      "Execution support"
+    ],
+  },
+
+  "land-selection": {
+    icon: Map,
+    title: "Land Selection",
+    tagline: "Choose the right land for long-term prosperity",
+    bannerImage: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80",
+    description: [
+      "Selecting the right plot is the foundation of success in Vastu.",
+      "We analyze direction, soil, surroundings, and energy before construction."
+    ],
+    benefits: [
+      "Strong foundation for success",
+      "Positive energy from the beginning",
+      "Avoid future Vastu defects",
+      "Better long-term growth"
+    ],
+    process: [
+      "Site evaluation",
+      "Directional analysis",
+      "Soil and energy testing",
+      "Final recommendation"
     ],
   },
 };

@@ -24,8 +24,8 @@ const ContactPage = () => {
               </p>
               <div className="space-y-6">
                 {[
-                  { icon: Phone, text: "Call for a consultation", detail: "+91-98765 43210" },
-                  { icon: Mail, text: "Email us", detail: "info@mysticvigyan.com" },
+                  { icon: Phone, text: "Call for a consultation", detail: "+91-7837513111" },
+                  { icon: Mail, text: "Email us", detail: "mysticvigyanm@gmail.com" },
                   { icon: MapPin, text: "Based in India", detail: "Serving clients worldwide" },
                 ].map(({ icon: Icon, text, detail }) => (
                   <div key={text} className="flex items-center gap-4">

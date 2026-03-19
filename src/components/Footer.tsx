@@ -16,7 +16,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-background/60 text-sm leading-relaxed">
-              Bridging ancient Vedic Vastu wisdom with modern living. We help you harmonize your spaces for prosperity, health, and spiritual growth.
+            Bridging ancient Vedic Vastu and Astrology wisdom with modern living. We help you harmonize your spaces and life path for prosperity, health, and spiritual growth.
             </p>
           </div>
 
@@ -41,21 +41,27 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-background font-semibold mb-4">Our Services</h4>
-            <ul className="space-y-2">
-              {[
-                { label: "Industrial Vastu", path: "/services/industrial-vastu" },
-                { label: "Commercial Vastu", path: "/services/commercial-vastu" },
-                { label: "Vedic Vastu", path: "/services/vedic-vastu" },
-              ].map((link) => (
-                <li key={link.label}>
-                  <Link to={link.path} className="text-background/60 hover:text-gold text-sm transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+  <h4 className="text-background font-semibold mb-4">Our Services</h4>
+  <ul className="space-y-2">
+    {[
+      { label: "Astrology", path: "/services/astrology" },
+      { label: "Vedic Astrology", path: "/services/vedic-astrology" },
+      { label: "K.P Astrology", path: "/services/kp-astrology" },
+      { label: "Residential Vastu", path: "/services/residential-vastu" },
+      { label: "Commercial Vastu", path: "/services/commercial-vastu" },
+      { label: "Land Selection", path: "/services/land-selection" },
+    ].map((link) => (
+      <li key={link.label}>
+        <Link
+          to={link.path}
+          className="text-background/60 hover:text-gold text-sm transition-colors"
+        >
+          {link.label}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
 
           {/* Contact Info */}
           <div>
@@ -63,11 +69,19 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-gold mt-0.5 shrink-0" />
-                <a href="tel:+919876543210" className="text-background/60 hover:text-gold text-sm transition-colors">+91-98765 43210</a>
+                <a href="tel:+917837513111" className="text-background/60 hover:text-gold text-sm transition-colors">+91-78375 13111</a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-gold mt-0.5 shrink-0" />
+                <a href="tel:+919780375666" className="text-background/60 hover:text-gold text-sm transition-colors">+91-97803 75666</a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-gold mt-0.5 shrink-0" />
+                <a href="tel:+919780917333" className="text-background/60 hover:text-gold text-sm transition-colors">+91-97809 17333</a>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-gold mt-0.5 shrink-0" />
-                <a href="mailto:info@mysticvigyan.com" className="text-background/60 hover:text-gold text-sm transition-colors">info@mysticvigyan.com</a>
+                <a href="mailto:mysticvigyanm@gmail.com" className="text-background/60 hover:text-gold text-sm transition-colors">mysticvigyanm@gmail.com</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-gold mt-0.5 shrink-0" />

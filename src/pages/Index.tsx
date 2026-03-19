@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import {
   Factory,
   Building2,
-  Home,
+  Map,
   Star,
   Layout,
   Award,
@@ -14,9 +14,7 @@ import {
   Sparkles,
   BookOpen,
 } from "lucide-react";
-import geoVastuCertificate from "@/assets/geo-vastu-certificate.jpeg";
 import vastuPractice from "@/assets/vastu-practice.jpeg";
-import vedicVastuCertificate from "@/assets/vedic-vastu-certificate.png";
 import vedicVastuVideo from "@/assets/vedic-vastu.mp4";
 import aboutHero from "@/assets/about-hero.png";
 
@@ -62,13 +60,56 @@ const services = [
     ],
   },
   {
-    icon: Home,
-    title: "Vedic Vastu",
-    slug: "vedic-vastu",
+    icon: Map,
+    title: "Land Selection",
+    slug: "land-selection",
     points: [
-      "Traditional consultation for holistic harmony",
-      "Energy correction without structural demolition",
-      "Alignment with the five natural elements",
+      "Choose plots based on Vastu principles for long-term prosperity",
+      "Analyze soil quality, directions, and surroundings",
+      "Ensure positive energy flow before construction begins",
+    ],
+  },
+
+  // ✅ New Services
+
+  {
+    icon: Star,
+    title: "Vedic Astrology",
+    slug: "vedic-astrology",
+    points: [
+      "Detailed birth chart (Janam Kundali) analysis",
+      "Accurate predictions based on planetary positions",
+      "Remedies using mantras, gemstones, and rituals",
+    ],
+  },
+  {
+    icon: Star,
+    title: "Bhrigu Nandi Nadi",
+    slug: "bhrigu-nandi-nadi",
+    points: [
+      "Predict life events using Nadi astrology principles",
+      "Deep insights into past, present, and future",
+      "Highly precise timing of major life events",
+    ],
+  },
+  {
+    icon: Star,
+    title: "K.P Astrology",
+    slug: "kp-astrology",
+    points: [
+      "Scientific and result-oriented astrology system",
+      "Accurate predictions with sub-lord theory",
+      "Useful for career, marriage, and finance queries",
+    ],
+  },
+  {
+    icon: Star,
+    title: "Nakshatra Analysis",
+    slug: "nakshatra-analysis",
+    points: [
+      "Personality insights based on birth star (Nakshatra)",
+      "Understand strengths, weaknesses, and life path",
+      "Guidance for relationships and career choices",
     ],
   },
 ];
@@ -275,53 +316,51 @@ const Index = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.slice(0, 3).map((service, i) => (
-              <motion.div
-                key={service.title}
-                className="bg-background rounded-xl p-8 border border-gold/20 shadow-md hover:shadow-xl transition-shadow duration-500 group"
-                initial={{ opacity: 0, y: 40 }}
-                animate={servicesInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.2 + i * 0.15 }}
-              >
-                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="w-7 h-7 text-gold" />
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-4">
-                  {service.title}
-                </h3>
-                <ul className="space-y-3 mb-6">
-                  {service.points.map((point) => (
-                    <li
-                      key={point}
-                      className="flex items-start gap-3 text-muted-foreground"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to={`/services/${service.slug}`}
-                  className="text-gold font-semibold text-sm hover:underline"
-                >
-                  Learn More →
-                </Link>
-              </motion.div>
-            ))}
+          {services.map((service, i) => (
+  <motion.div
+    key={service.title}
+    className="bg-[#f3f8f5] rounded-lg p-10 text-center 
+    border border-[#e0ebe5]
+    transition-all duration-500 group 
+    hover:-translate-y-2 hover:shadow-xl"
+    initial={{ opacity: 0, y: 40 }}
+    animate={servicesInView ? { opacity: 1, y: 0 } : {}}
+    transition={{ duration: 0.6, delay: 0.2 + i * 0.15 }}
+  >
+    {/* Icon Circle */}
+    <div className="flex justify-center mb-6">
+      <div className="w-20 h-20 rounded-full border border-dashed border-[#c9a13b]/40 
+      flex items-center justify-center group-hover:border-[#c9a13b] transition-all">
+        
+        <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center 
+        group-hover:bg-[#c9a13b]/10 transition-all duration-500">
+          
+          <service.icon className="w-7 h-7 text-[#c9a13b]" />
+        </div>
+      </div>
+    </div>
+
+    {/* Title */}
+    <h3 className="text-lg font-semibold text-[#1f4d3a] mb-3">
+      {service.title}
+    </h3>
+
+    {/* Underline */}
+    <div className="w-10 h-[2px] bg-[#c9a13b] mx-auto mb-4 
+    group-hover:w-16 transition-all duration-300"></div>
+
+    {/* CTA */}
+    <Link
+      to={`/services/${service.slug}`}
+      className="text-[#c9a13b] text-sm font-semibold tracking-wide 
+      hover:underline"
+    >
+      READ MORE
+    </Link>
+  </motion.div>
+))}
           </div>
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0 }}
-            animate={servicesInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            <Link
-              to="/services"
-              className="inline-block px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:brightness-110 transition-all"
-            >
-              View All Services
-            </Link>
-          </motion.div>
+         
         </div>
       </section>
 

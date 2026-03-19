@@ -33,7 +33,7 @@ const Contact = () => {
         >
           {[
             { icon: Phone, text: "Call for a consultation", detail: "+91-XXXXX XXXXX" },
-            { icon: Mail, text: "Email us", detail: "info@mysticvigyan.com" },
+            { icon: Mail, text: "Email us", detail: "mysticvigyanm@gmail.com" },
             { icon: MapPin, text: "Based in India", detail: "Serving clients worldwide" },
           ].map(({ icon: Icon, text, detail }) => (
             <div
