@@ -31,7 +31,7 @@ const AboutPage = () => {
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
             <motion.div className="order-1  md:order-2" initial={{ opacity: 0, x: -40 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, delay: 0.2 }}>
               <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
-                At <strong className="text-primary">Mystic Vigyan</strong>, we bridge the timeless wisdom of Vedic Vastu Shastra with modern architectural understanding. Our approach blends scientific analysis with spiritual insight to create spaces that nurture well-being, prosperity, and harmony.
+                At <strong className="text-primary">Mystic Vigyan</strong>, we bridge the timeless wisdom of Vedic Vastu Shastra and Astrology with modern architectural understanding. Our approach combines scientific analysis, cosmic alignment, and spiritual insight to create spaces that nurture well-being, prosperity, and harmony. By aligning both your environment and planetary influences, we ensure a balanced flow of energy that supports growth, success, and inner peace.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 With years of dedicated practice, we have helped hundreds of families and businesses transform their environments. Our consultations address the subtle energies within a space — balancing the five elements to promote health, wealth, and spiritual growth.

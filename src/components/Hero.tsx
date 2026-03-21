@@ -19,7 +19,7 @@ const Hero = () => {
             Where vastu Aligns Your Space & <span className="text-gold">Astrology Guides your destiny </span>
           </motion.h1>
           <motion.p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl font-light" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
-          Expert Vastu and Astrology guidance to align your spaces and destiny for prosperity and well-being.
+          Vastu and Astrology guidance to align your spaces and destiny for prosperity and well-being.
           </motion.p>
           <motion.div className="flex flex-col sm:flex-row gap-4" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
             <Link to="/contact" className="px-8 py-4 bg-gold text-gold-foreground font-semibold rounded-lg hover:brightness-110 transition-all duration-300 shadow-lg">

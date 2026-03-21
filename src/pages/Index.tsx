@@ -164,7 +164,7 @@ const Index = () => {
                   transition={{ duration: 0.6, delay: 0.15 }}
                 >
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                    At <strong className="text-primary">Mystic Vigyan</strong>, we bridge the timeless wisdom of Vedic Vastu Shastra with modern architectural understanding. Our approach blends scientific analysis with spiritual insight to create spaces that nurture well-being, prosperity, and harmony.
+                    At <strong className="text-primary">Mystic Vigyan</strong>, we bridge the timeless wisdom of Vedic Vastu Shastra and Astrology with modern architectural understanding. Our approach combines scientific analysis, cosmic alignment, and spiritual insight to create spaces that nurture well-being, prosperity, and harmony. By aligning both your environment and planetary influences, we ensure a balanced flow of energy that supports growth, success, and inner peace.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
                     With years of dedicated practice, we have helped hundreds of families and businesses transform their environments. Our consultations address the subtle energies within a space — balancing the five elements to promote health, wealth, and spiritual growth.
@@ -225,7 +225,7 @@ const Index = () => {
               </h2>
               <div className="w-20 h-0.5 bg-gold mx-auto" />
             </motion.div>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-1 gap-12 items-center">
               <motion.div
                 className="prose prose-lg text-muted-foreground space-y-4 order-2 md:order-1"
                 initial={{ opacity: 0, x: -24 }}
@@ -245,14 +245,7 @@ const Index = () => {
                   Learn more about our approach →
                 </Link>
               </motion.div>
-              <motion.div
-                className="rounded-xl overflow-hidden shadow-xl border border-gold/20 order-1 md:order-2 max-h-[320px] md:max-h-[380px]"
-                initial={{ opacity: 0, x: 24 }}
-                animate={whatIsInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.25 }}
-              >
-                <img src={vastuPractice} alt="Traditional Vastu practice and energy alignment" className="w-full h-full object-cover object-center" />
-              </motion.div>
+             
             </div>
           </div>
         </div>
