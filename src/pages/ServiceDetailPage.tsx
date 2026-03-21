@@ -127,8 +127,8 @@ const serviceData: Record<string, {
         "description": "Shop Vastu focuses on attracting customers, increasing sales, and creating a positive shopping environment. By aligning the shop layout with Vastu principles, it helps improve customer experience and business profitability."
       },
       {
-        "title": "Mole Vastu",
-        "description": "Mole Vastu is based on Samudrik Shastra and interprets the meaning of moles on the body. It helps understand personality traits, life patterns, and potential future outcomes based on their placement and appearance."
+        "title": "Mall Vastu",
+        "description": "Mall Vastu focuses on designing shopping spaces to enhance customer flow, increase sales, and create a positive, prosperous business environment."
       },
       {
         "title": "Hospital Vastu",
