@@ -2,13 +2,22 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import { Factory, Building2, Sparkles, ScrollText, Brain, Moon, Map, Star, Layout, CheckCircle, ArrowLeft } from "lucide-react";
+import astrologyBanner from "@/assets/services/astro.webp";
+import vedicBanner from "@/assets/services/vedic.jpg";
+import nundi from "@/assets/services/nundi.jpg";
+import kp from "@/assets/services/kp.jpg";
+import nk from "@/assets/services/nakshatra.webp";
+import residential from "@/assets/services/residential.jpg";
+import comm from "@/assets/services/commercial.jpg";
+import ind from "@/assets/services/industry.jpg";
+import land from "@/assets/services/land.jpg";
 
 const serviceData: Record<string, {
   icon: any;
   title: string;
   tagline: string;
   bannerImage: string;
-  description: string[];
+  description: string | string[];
   benefits: string[];
   process: string[];
 }> = {
@@ -16,11 +25,8 @@ const serviceData: Record<string, {
     icon: Star,
     title: "Astrology",
     tagline: "Align your life path with the celestial movements",
-    bannerImage: "https://images.unsplash.com/photo-1506318137071-a8e063b4b47e?auto=format&fit=crop&q=80",
-    description: [
-      "Our Astrology services provide deep insights into your life's journey by analyzing planetary positions at birth.",
-      "We guide you in career, relationships, health, and finances through detailed horoscope and predictive techniques."
-    ],
+    bannerImage: astrologyBanner,
+    description: "Astrology is an ancient Vedic science that studies the movement and position of celestial bodies to understand their influence on human life. By analyzing your birth chart (kundli), astrology provides deep insights into your personality, career, relationships, health, and life path. It helps you make informed decisions by identifying favorable periods, challenges, and opportunities. With the guidance of astrology, you can align your actions with cosmic energies, overcome obstacles, and create a more balanced and fulfilling life.",
     benefits: [
       "Clarity on life purpose and direction",
       "Relationship and compatibility insights",
@@ -39,7 +45,7 @@ const serviceData: Record<string, {
     icon: Sparkles,
     title: "Vedic Astrology",
     tagline: "Ancient wisdom to decode your destiny and karma",
-    bannerImage: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80",
+    bannerImage: vedicBanner,
     description: [
       "Vedic Astrology is a time-tested Indian system that reveals deep karmic patterns and life events.",
       "It provides accurate predictions and remedies based on planetary movements and ancient scriptures."
@@ -62,7 +68,7 @@ const serviceData: Record<string, {
     icon: ScrollText,
     title: "Bhrigu Nandi Nadi",
     tagline: "Highly precise predictions using Nadi principles",
-    bannerImage: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80",
+    bannerImage: nundi,
     description: [
       "Bhrigu Nandi Nadi is an advanced predictive system focusing on planetary combinations rather than houses.",
       "It provides highly accurate insights into life events and their timing."
@@ -85,7 +91,7 @@ const serviceData: Record<string, {
     icon: Brain,
     title: "K.P Astrology",
     tagline: "Scientific astrology with precise event prediction",
-    bannerImage: "https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&q=80",
+    bannerImage: kp,
     description: [
       "KP Astrology (Krishnamurti Paddhati) is a modern system known for its accuracy.",
       "It uses sub-lord theory to predict events with high precision."
@@ -108,7 +114,7 @@ const serviceData: Record<string, {
     icon: Moon,
     title: "Nakshatra Analysis",
     tagline: "Understand your personality through your birth star",
-    bannerImage: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80",
+    bannerImage:nk,
     description: [
       "Nakshatras represent subtle energies influencing your personality and life path.",
       "This analysis helps uncover your true nature, strengths, and karmic patterns."
@@ -131,16 +137,16 @@ const serviceData: Record<string, {
     icon: Layout,
     title: "Residential Vastu",
     tagline: "Create a harmonious and peaceful living environment",
-    bannerImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
-    description: [
-      "Residential Vastu ensures your home promotes health, peace, and prosperity.",
-      "We optimize layouts and directions for maximum positive energy flow."
-    ],
+    bannerImage: residential,
+    description: "Residential Vastu is a time-tested Vedic science that focuses on creating a harmonious living environment by aligning your home with natural energies and the five essential elements—Earth, Water, Fire, Air, and Space. A well-balanced home not only enhances positivity but also plays a vital role in improving health, relationships, financial stability, and overall well-being. By understanding the energy flow within your living space, Residential Vastu helps eliminate negative influences and brings balance, peace, and prosperity into your daily life. Whether you are building a new home, purchasing a property, or experiencing challenges in your current residence, applying Vastu principles can create a powerful shift in your environment, making your home a place of comfort, growth, and positive transformation.",
     benefits: [
-      "Better family harmony",
-      "Improved health and well-being",
-      "Positive environment",
-      "Removal of negative energy"
+      "Promotes peace, positivity, and emotional well-being",
+      "Enhances financial growth and career opportunities",
+      "Strengthens relationships and family harmony",
+      "Improves health and sleep quality",
+      "Balances energy flow throughout the home",
+      "Helps remove negative energies and obstacles",
+      "Provides practical solutions without major structural changes"
     ],
     process: [
       "Layout analysis",
@@ -154,16 +160,16 @@ const serviceData: Record<string, {
     icon: Building2,
     title: "Commercial Vastu",
     tagline: "Design spaces that attract growth and success",
-    bannerImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
-    description: [
-      "Commercial Vastu enhances business growth and financial success.",
-      "We optimize layouts to improve customer experience and profitability."
-    ],
+    bannerImage: comm,
+    description: "Commercial Vastu is a powerful application of Vedic science that focuses on optimizing business spaces to attract growth, success, and financial stability. Every commercial establishment—whether it’s an office, shop, showroom, or factory—carries energy that directly influences productivity, decision-making, and profitability. By aligning your workspace with the natural forces and the five elements—Earth, Water, Fire, Air, and Space—Commercial Vastu helps create a balanced and positive environment that supports business expansion and smooth operations. It not only enhances employee performance and customer experience but also minimizes obstacles, financial losses, and instability. Whether you are starting a new business, relocating, or facing challenges in your current setup, applying Vastu principles can significantly improve the flow of opportunities and overall success of your venture.",
     benefits: [
-      "Increased revenue",
-      "Better customer flow",
-      "Improved team productivity",
-      "Financial stability"
+      "Attracts business growth, profits, and new opportunities",
+      "Enhances productivity and efficiency of employees",
+      "Improves decision-making and leadership clarity",
+      "Creates a positive impression on clients and customers",
+      "Reduces financial losses and operational obstacles",
+      "Promotes stability and long-term business success",
+      "Provides practical solutions without major structural changes"
     ],
     process: [
       "Site analysis",
@@ -177,16 +183,16 @@ const serviceData: Record<string, {
     icon: Factory,
     title: "Industrial Vastu",
     tagline: "Boost productivity and reduce operational challenges",
-    bannerImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80",
-    description: [
-      "Industrial Vastu focuses on optimizing production environments.",
-      "We align machinery and workflow for maximum efficiency."
-    ],
+    bannerImage: ind,
+    description: "Industrial Vastu is a specialized branch of Vedic science that focuses on optimizing factories, manufacturing units, warehouses, and industrial spaces to ensure smooth operations, increased productivity, and sustained growth. In an industrial setup, the flow of energy directly impacts machinery performance, workforce efficiency, production output, and overall profitability. By aligning your industrial space with the five natural elements—Earth, Water, Fire, Air, and Space—Industrial Vastu helps create a balanced and powerful environment that minimizes disruptions, reduces losses, and enhances operational stability. Proper placement of machinery, raw materials, administrative areas, and energy zones ensures better coordination, fewer breakdowns, and improved workflow. Whether you are setting up a new unit or facing recurring issues like financial losses, labor problems, or production delays, implementing Vastu principles can bring structure, balance, and long-term success to your industrial operations.",
     benefits: [
-      "Higher productivity",
-      "Reduced downtime",
-      "Safer work environment",
-      "Efficient workflow"
+      "Improves production efficiency and workflow",
+      "Reduces machine breakdowns and operational issues",
+      "Enhances workforce productivity and coordination",
+      "Minimizes financial losses and unexpected obstacles",
+      "Supports smooth and uninterrupted business operations",
+      "Promotes long-term stability and industrial growth",
+      "Offers practical solutions without major structural changes"
     ],
     process: [
       "Site inspection",
@@ -200,16 +206,16 @@ const serviceData: Record<string, {
     icon: Map,
     title: "Land Selection",
     tagline: "Choose the right land for long-term prosperity",
-    bannerImage: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80",
-    description: [
-      "Selecting the right plot is the foundation of success in Vastu.",
-      "We analyze direction, soil, surroundings, and energy before construction."
-    ],
+    bannerImage: land,
+    description: "Land Selection Vastu is a crucial step in ensuring long-term success, prosperity, and stability for any construction, whether residential, commercial, or industrial. The energy of a space begins from the land itself, and choosing the right plot with proper orientation, soil quality, shape, and surroundings plays a significant role in shaping the future outcomes of that property. According to Vastu principles, every piece of land carries its own energy field, which can either support growth and positivity or lead to obstacles and imbalance. By carefully analyzing factors such as direction, slope, location, nearby structures, and natural elements, Land Selection Vastu helps in identifying plots that attract positive vibrations and eliminate potential challenges. Whether you are planning to build a home, start a business, or develop an industrial unit, selecting a Vastu-compliant land ensures a strong and successful foundation for everything that follows.",
     benefits: [
-      "Strong foundation for success",
-      "Positive energy from the beginning",
-      "Avoid future Vastu defects",
-      "Better long-term growth"
+      "Helps choose land with positive and supportive energy",
+      "Ensures better financial growth and future stability",
+      "Reduces risks of obstacles, losses, and delays",
+      "Guides proper orientation and plot selection",
+      "Enhances long-term success of construction projects",
+      "Aligns land with natural elements and energy flow",
+      "Provides clarity and confidence before investment decisions"
     ],
     process: [
       "Site evaluation",
@@ -237,91 +243,47 @@ const ServiceDetailPage = () => {
 
   return (
     <>
-      <section className="relative py-32 overflow-hidden flex items-center justify-center">
-        {/* Background Image with Overlay */}
-        <div 
-          className="absolute inset-0 z-0 bg-cover bg-center"
+      <section className="relative h-[70vh] flex items-center justify-center text-center">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${service.bannerImage})` }}
         >
-          {/* Dark Green Gradient Overlay to match your brand and Screenshot */}
-          <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/40 to-primary/90" />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 text-center">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="w-20 h-20 rounded-2xl bg-gold/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-6 border border-gold/30"
-          >
-            <Icon className="w-10 h-10 text-gold" />
-          </motion.div>
-          <motion.h1 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-6xl font-bold text-white mb-4"
-          >
+        {/* Content */}
+        <div className="relative z-10 px-6">
+          <h1 className="text-4xl md:text-6xl font-semibold text-white mb-6">
             {service.title}
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-white/80 text-xl max-w-2xl mx-auto font-light"
+          </h1>
+
+          <Link
+            to="/contact"
+            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-orange-600 transition"
           >
-            {service.tagline}
-          </motion.p>
+            CONTACT US
+          </Link>
         </div>
       </section>
 
-      <section className="py-20 bg-background mandala-bg">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <Link to="/services" className="inline-flex items-center gap-2 text-gold hover:underline mb-10 text-sm font-medium">
-            <ArrowLeft className="w-4 h-4" /> Back to All Services
-          </Link>
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-2xl font-semibold text-green-800 mb-4">
+            {service.title}
+          </h2>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            {service.description.map((para, i) => (
-              <p key={i} className="text-muted-foreground leading-relaxed mb-5 text-lg">{para}</p>
-            ))}
-          </motion.div>
-
-          <motion.div className="mt-14" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-            <h2 className="text-2xl font-bold text-primary mb-6">Key Benefits</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
+          <p className="text-gray-600 leading-relaxed text-lg">
+            {service.description}
+          </p>
+          
+          <br />
+          <ul style={{listStyleType: "disc"}} className="text-gray-600 leading-relaxed text-lg">
               {service.benefits.map((benefit) => (
-                <div key={benefit} className="flex items-start gap-3 bg-champagne/50 rounded-lg p-4 border border-gold/10">
-                  <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
-                  <span className="text-muted-foreground">{benefit}</span>
-                </div>
+                <li key={benefit}>{benefit}</li>
               ))}
-            </div>
-          </motion.div>
-
-          <motion.div className="mt-14" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
-            <h2 className="text-2xl font-bold text-primary mb-6">Our Process</h2>
-            <div className="space-y-4">
-              {service.process.map((step, i) => (
-                <div key={step} className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-gold text-gold-foreground flex items-center justify-center shrink-0 font-bold text-sm">
-                    {i + 1}
-                  </div>
-                  <p className="text-muted-foreground pt-1">{step}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div className="mt-14 text-center bg-primary rounded-xl p-10 relative overflow-hidden" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }}>
-            <div className="absolute inset-0 sacred-geometry opacity-15" />
-            <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-primary-foreground mb-3">Ready to Transform Your Space?</h3>
-              <p className="text-primary-foreground/70 mb-6">Book a consultation and experience the power of Vedic Vastu.</p>
-              <Link to="/contact" className="inline-block px-8 py-3 bg-gold text-gold-foreground font-semibold rounded-lg hover:brightness-110 transition-all">
-                Book Consultation
-              </Link>
-            </div>
-          </motion.div>
+            </ul>
         </div>
       </section>
     </>
