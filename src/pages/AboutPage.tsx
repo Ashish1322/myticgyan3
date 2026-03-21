@@ -7,6 +7,8 @@ import consultantEvent from "@/assets/consultant-event.jpeg";
 import geoVastuCertificate from "@/assets/geo-vastu-certificate.jpeg";
 import vedicVastuCertificate from "@/assets/vedic-vastu-temp.jpeg";
 import vedicVastuVideo from "@/assets/vedic-vastu.mp4";
+import astro from "@/assets/about/astrologer.jpeg";
+import vastu from "@/assets/about/vastu.jpeg";
 
 const AboutPage = () => {
   const ref = useRef(null);
@@ -27,7 +29,7 @@ const AboutPage = () => {
       <section className="py-24 bg-background mandala-bg" ref={ref}>
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-            <motion.div className="order-2 md:order-1" initial={{ opacity: 0, x: -40 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, delay: 0.2 }}>
+            <motion.div className="order-1  md:order-2" initial={{ opacity: 0, x: -40 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, delay: 0.2 }}>
               <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
                 At <strong className="text-primary">Mystic Vigyan</strong>, we bridge the timeless wisdom of Vedic Vastu Shastra with modern architectural understanding. Our approach blends scientific analysis with spiritual insight to create spaces that nurture well-being, prosperity, and harmony.
               </p>
@@ -54,9 +56,25 @@ const AboutPage = () => {
               </Link>
             </motion.div>
 
-            <motion.div className="order-1 md:order-2" initial={{ opacity: 0, x: 40 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, delay: 0.4 }}>
-              <div className="rounded-xl overflow-hidden shadow-xl border border-gold/20">
-                <img src={aboutHero} alt="Welcome to Mystic Vigyan - Decode Your Soul & Discover Your Path" className="w-full h-auto object-cover" />
+            <motion.div
+              className="order-2 md:order-3 w-full grid grid-cols-2 gap-3 sm:gap-4"
+              initial={{ opacity: 0, x: 40 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
+              <div className="rounded-xl overflow-hidden shadow-xl border border-gold/20 bg-muted/30">
+                <img
+                  src={astro}
+                  alt="Welcome to Mystic Vigyan — astrological guidance and soul path discovery"
+                  className="w-full aspect-[3/4] object-cover"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden shadow-xl border border-gold/20 bg-muted/30">
+                <img
+                  src={vastu}
+                  alt="Vedic Vastu Shastra — sacred space and architectural harmony"
+                  className="w-full aspect-[3/4] object-cover"
+                />
               </div>
             </motion.div>
           </div>

@@ -17,6 +17,9 @@ import {
 import vastuPractice from "@/assets/hero-3.jpeg";
 import vedicVastuVideo from "@/assets/vedic-vastu.mp4";
 import aboutHero from "@/assets/about-hero.png";
+import astro from "@/assets/about/astrologer.jpeg";
+import vastu from "@/assets/about/vastu.jpeg";
+
 
 const services = [
   {
@@ -68,50 +71,7 @@ const services = [
       "Analyze soil quality, directions, and surroundings",
       "Ensure positive energy flow before construction begins",
     ],
-  },
-
-  // ✅ New Services
-
-  {
-    icon: Star,
-    title: "Vedic Astrology",
-    slug: "vedic-astrology",
-    points: [
-      "Detailed birth chart (Janam Kundali) analysis",
-      "Accurate predictions based on planetary positions",
-      "Remedies using mantras, gemstones, and rituals",
-    ],
-  },
-  {
-    icon: Star,
-    title: "Bhrigu Nandi Nadi",
-    slug: "bhrigu-nandi-nadi",
-    points: [
-      "Predict life events using Nadi astrology principles",
-      "Deep insights into past, present, and future",
-      "Highly precise timing of major life events",
-    ],
-  },
-  {
-    icon: Star,
-    title: "K.P Astrology",
-    slug: "kp-astrology",
-    points: [
-      "Scientific and result-oriented astrology system",
-      "Accurate predictions with sub-lord theory",
-      "Useful for career, marriage, and finance queries",
-    ],
-  },
-  {
-    icon: Star,
-    title: "Nakshatra Analysis",
-    slug: "nakshatra-analysis",
-    points: [
-      "Personality insights based on birth star (Nakshatra)",
-      "Understand strengths, weaknesses, and life path",
-      "Guidance for relationships and career choices",
-    ],
-  },
+  }
 ];
 
 const whyChooseUs = [
@@ -161,23 +121,27 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center mb-14">
-              <motion.div
-                className="relative order-2 md:order-1 overflow-hidden rounded-2xl shadow-lg ring-1 ring-primary/10 min-h-[320px] md:min-h-[380px] flex items-center bg-champagne/30"
-                initial={{ opacity: 0, x: -24 }}
-                animate={aboutInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.6 }}
-              >
+            <motion.div
+              className="order-2 md:order-3 w-full grid grid-cols-2 gap-3 sm:gap-4"
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 } }
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
+              <div className="rounded-xl overflow-hidden shadow-xl border border-gold/20 bg-muted/30">
                 <img
-                  src={aboutHero}
-                  alt="Mystic Vigyan - Vedic Vastu and holistic space consulting"
-                  className="w-full h-full object-contain rounded-2xl"
+                  src={astro}
+                  alt="Welcome to Mystic Vigyan — astrological guidance and soul path discovery"
+                  className="w-full aspect-[3/4] object-cover"
                 />
-                <div
-                  className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/40 via-white/15 to-transparent pointer-events-none"
-                  aria-hidden
+              </div>
+              <div className="rounded-xl overflow-hidden shadow-xl border border-gold/20 bg-muted/30">
+                <img
+                  src={vastu}
+                  alt="Vedic Vastu Shastra — sacred space and architectural harmony"
+                  className="w-full aspect-[3/4] object-cover"
                 />
-                <div className="absolute -bottom-2 -right-2 w-24 h-24 border-2 border-gold/40 rounded-2xl -z-10" aria-hidden />
-              </motion.div>
+              </div>
+            </motion.div>
               <div className="order-1 md:order-2 space-y-6">
                 <motion.div
                   className="text-center md:text-left"

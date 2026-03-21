@@ -2,13 +2,15 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
+import he from "@/assets/hero0.png";
+import he3 from "@/assets/hero00.jpeg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-[85vh] flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }} />
-      <div className="absolute inset-0 bg-primary/70" />
-      <div className="absolute inset-0 sacred-geometry opacity-30" />
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${he3})` }} />
+      <div className="absolute inset-0 bg-primary/50" />
+      
 
       <div className="container relative z-10 mx-auto px-6 py-24">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">

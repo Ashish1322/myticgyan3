@@ -81,10 +81,33 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "mystic-wave": {
+          "0%, 100%": { transform: "translateX(0) scaleY(1)", opacity: "0.35" },
+          "50%": { transform: "translateX(-4%) scaleY(1.08)", opacity: "0.55" },
+        },
+        "mystic-wave-reverse": {
+          "0%, 100%": { transform: "translateX(0) scaleY(1)", opacity: "0.25" },
+          "50%": { transform: "translateX(5%) scaleY(1.05)", opacity: "0.45" },
+        },
+        "mystic-shimmer": {
+          "0%": { transform: "translateX(-100%) skewX(-12deg)", opacity: "0" },
+          "15%": { opacity: "0.12" },
+          "35%": { opacity: "0.08" },
+          "100%": { transform: "translateX(200%) skewX(-12deg)", opacity: "0" },
+        },
+        "star-twinkle": {
+          "0%, 100%": { opacity: "0.2", transform: "scale(1)" },
+          "45%": { opacity: "1", transform: "scale(1.35)" },
+          "70%": { opacity: "0.5", transform: "scale(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "mystic-wave": "mystic-wave 14s ease-in-out infinite",
+        "mystic-wave-reverse": "mystic-wave-reverse 18s ease-in-out infinite",
+        "mystic-shimmer": "mystic-shimmer 12s ease-in-out infinite",
+        "star-twinkle": "star-twinkle var(--twinkle-duration, 3s) ease-in-out infinite",
       },
     },
   },

@@ -19,54 +19,6 @@ const services = [
     ],
   },
   {
-    icon: Sparkles,
-    title: "Vedic Astrology",
-    slug: "vedic-astrology",
-    description:
-      "Ancient Indian astrology system offering deep insights into destiny, karma, and life events.",
-    points: [
-      "Detailed Janam Kundali analysis",
-      "Predictions based on planetary positions",
-      "Remedies using mantras, gemstones, and rituals",
-    ],
-  },
-  {
-    icon: ScrollText,
-    title: "Bhrigu Nandi Nadi",
-    slug: "bhrigu-nandi-nadi",
-    description:
-      "A unique Nadi astrology system that provides highly accurate predictions based on planetary combinations.",
-    points: [
-      "Insights into past, present, and future",
-      "Precise timing of life events",
-      "Advanced predictive astrology techniques",
-    ],
-  },
-  {
-    icon: Brain,
-    title: "K.P Astrology",
-    slug: "kp-astrology",
-    description:
-      "Krishnamurti Paddhati astrology offers scientific and precise predictions using sub-lord theory.",
-    points: [
-      "Highly accurate event predictions",
-      "Sub-lord based analysis",
-      "Best for career, marriage, and finance guidance",
-    ],
-  },
-  {
-    icon: Moon,
-    title: "Nakshatra Analysis",
-    slug: "nakshatra-analysis",
-    description:
-      "Understand your personality, strengths, and destiny through the power of your birth star (Nakshatra).",
-    points: [
-      "Personality and behavioral insights",
-      "Life path and karmic analysis",
-      "Relationship and career guidance",
-    ],
-  },
-  {
     icon: Layout,
     title: "Residential Vastu",
     slug: "residential-vastu",
