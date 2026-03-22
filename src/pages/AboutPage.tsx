@@ -103,7 +103,7 @@ const AboutPage = () => {
                 <img src={consultantEvent} alt="Mystic Vigyan at professional events" className="w-full h-96 object-cover" />
                 <div className="p-4 text-center">
                   <p className="text-primary font-semibold">Munish Saggi (Astrologer & Researcher)</p>
-                  <p className="text-muted-foreground text-sm">Decoding cosmic patterns to provide accurate guidance for life decisions and spiritual growth.</p>
+                  <p className="text-muted-foreground text-sm">Decoding cosmic patterns to provide precise guidance for life decisions and personal transformation.</p>
                 </div>
               </motion.div>
             </div>
@@ -131,7 +131,7 @@ const AboutPage = () => {
                
               </motion.div>
               <motion.div className="rounded-xl overflow-hidden shadow-xl border-2 border-gold/20 bg-background" initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                <img src={vedicVastuCertificate} alt="Vedic Vastu Expert certification from Sahasra MahaVaastu" className="w-full object-cover object-top aspect-[3/4]" />
+                <img src={vedicVastuCertificate} alt="Vedic Vastu Expert certification from Sahasra MahaVastu" className="w-full object-cover object-top aspect-[3/4]" />
               
               </motion.div>
             </div>

@@ -1,7 +1,38 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin } from "lucide-react";
 
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+
 const ContactPage = () => {
+
+  const formRef = useRef();
+  const [loading,setLoading] = useState(false);
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs
+      .sendForm(
+        "service_nvqx0w9",     // replace with your Service ID
+        "template_b08g9qd",    // replace with your Template ID
+        formRef.current,
+        "ydQXSrxdEpJ6puUb4"  // replace with your Public Key
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          alert("Message sent successfully!");
+          setLoading(false);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert("Failed to send message!");
+          setLoading(false);
+        }
+      );
+  };
+
   return (
     <>
       <section className="bg-primary py-20 relative overflow-hidden">
@@ -42,25 +73,25 @@ const ContactPage = () => {
             </motion.div>
 
             {/* Contact Form */}
-            <motion.form initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <motion.form ref={formRef} initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="space-y-5" onSubmit={sendEmail}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-primary mb-1.5">Full Name</label>
-                <input id="name" type="text" placeholder="Your name" className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-all" />
+                <input name="user_name" id="name" type="text" placeholder="Your name" className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-all" />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-primary mb-1.5">Email</label>
-                <input id="email" type="email" placeholder="you@example.com" className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-all" />
+                <input id="email" name="user_email" type="email" placeholder="you@example.com" className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-all" />
               </div>
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-primary mb-1.5">Phone</label>
-                <input id="phone" type="tel" placeholder="+91-XXXXX XXXXX" className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-all" />
+                <input id="phone" name="user_phone"  type="tel" placeholder="+91-XXXXX XXXXX" className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-all" />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-primary mb-1.5">Message</label>
-                <textarea id="message" rows={4} placeholder="Tell us about your requirements..." className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-all resize-none" />
+                <textarea name="user_message" id="message" rows={4} placeholder="Tell us about your requirements..." className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-all resize-none" />
               </div>
-              <button type="submit" className="w-full px-6 py-3 bg-gold text-gold-foreground font-semibold rounded-lg hover:brightness-110 transition-all">
-                Send Message
+              <button type="submit" className="w-full px-6 py-3 bg-gold text-gold-foreground font-semibold rounded-lg hover:brightness-110 transition-all" disabled={loading}>
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </motion.form>
           </div>
